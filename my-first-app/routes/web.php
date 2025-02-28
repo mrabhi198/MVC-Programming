@@ -67,13 +67,13 @@ Route::get('/', function () {
 //task2
 Route::get("data/{num}", function($num){
     if ($num >= 90 && $num <= 100){
-        return "grade is A";
+        return "Grade A";
     } else if ($num >= 80 && $num < 90){
-        return "gade is B";
+        return "Grade B";
     } else if ($num >= 70 && $num < 80){
-        return "grade is C";
+        return "Grade C";
     } else if ($num >= 60 && $num < 70){
-        return "grade is D";
+        return "Grade D";
     } else if ($num < 60 && $num >= 0){
         return "fail";
     }
