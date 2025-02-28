@@ -21,3 +21,7 @@ composer
 
 to create view file in laravel:
     php artisan make:view viewName
+
+
+Laravel:
+->name() ➜ is function (called name route)
