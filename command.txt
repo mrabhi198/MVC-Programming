@@ -1,0 +1,23 @@
+Step to create new project ➜
+    to install laravel global: composer global require laravel/installer
+    to create project: laravel new projectName.
+        ➜ no starting kit (none)
+        ➜ pest
+        ➜ SQLite
+        ➜ cd firstProject
+        ➜ npm install && npm run build
+        ➜ composer run dev
+
+    run laravel server: 
+        composer install
+        sudo dnf install composer -y 
+        php artisan serve
+
+xampp
+git
+7zip
+composer
+
+
+to create view file in laravel:
+    php artisan make:view viewName
