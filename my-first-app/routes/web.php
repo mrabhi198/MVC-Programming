@@ -80,19 +80,36 @@ Route::get('/', function () {
 //     return "not less than 0 or grater than 100";
 // });
 
+//28th Feb 2025
 //name Route
-Route::get("admin/student/studentdata", function(){
-    return view("view1");
-})->name("data");
+// Route::get("admin/student/studentdata", function(){
+//     return view("view1");
+// })->name("data");
 
 //->name() ➜ is function (called name route)
 
-Route::get("admin/student/studentcourse", function(){
-    return view("course");
-})->name("course");
+// Route::get("admin/student/studentcourse", function(){
+//     return view("course");
+// })->name("course");
 
 
 //redirect webpage to course file
-Route::get("admin/student/redirect", function(){
-    return redirect()->route("course");
+// Route::get("admin/student/redirect", function(){
+//     return redirect()->route("course");
+// });
+
+//Response
+Route::get("home", function(){
+    return "Hello Laravel";
 });
+
+//above is request method
+
+Route::get("next", function(){
+    return response("Data Set")->header("Content-Type", "text/plain");
+});
+//OR
+Route::get("prev", function(){
+    return response("Data Set")->header("Content-Type", "text/html");
+});
+//header is only for server not for user
