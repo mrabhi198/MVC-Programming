@@ -113,3 +113,7 @@ Route::get("prev", function(){
     return response("Data Set")->header("Content-Type", "text/html");
 });
 //header is only for server not for user
+
+Route::get("json", function(){
+    return response()->json(["Name"=>"Mojit","City"=>"Jalandhar","Course"=>"Laravel"]);
+});
