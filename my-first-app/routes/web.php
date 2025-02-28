@@ -65,17 +65,34 @@ Route::get('/', function () {
 // });
 
 //task2
-Route::get("data/{num}", function($num){
-    if ($num >= 90 && $num <= 100){
-        return "Grade A";
-    } else if ($num >= 80 && $num < 90){
-        return "Grade B";
-    } else if ($num >= 70 && $num < 80){
-        return "Grade C";
-    } else if ($num >= 60 && $num < 70){
-        return "Grade D";
-    } else if ($num < 60 && $num >= 0){
-        return "fail";
-    }
-    return "not less than 0 or grater than 100";
+// Route::get("data/{num}", function($num){
+//     if ($num >= 90 && $num <= 100){
+//         return "Grade A";
+//     } else if ($num >= 80 && $num < 90){
+//         return "Grade B";
+//     } else if ($num >= 70 && $num < 80){
+//         return "Grade C";
+//     } else if ($num >= 60 && $num < 70){
+//         return "Grade D";
+//     } else if ($num < 60 && $num >= 0){
+//         return "fail";
+//     }
+//     return "not less than 0 or grater than 100";
+// });
+
+//name Route
+Route::get("admin/student/studentdata", function(){
+    return view("view1");
+})->name("data");
+
+//->name() ➜ is function (called name route)
+
+Route::get("admin/student/studentcourse", function(){
+    return view("course");
+})->name("course");
+
+
+//redirect webpage to course file
+Route::get("admin/student/redirect", function(){
+    return redirect()->route("course");
 });

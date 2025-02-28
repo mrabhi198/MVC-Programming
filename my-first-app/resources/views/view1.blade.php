@@ -1,6 +1,4 @@
-<!-- <h1>Home Page</h1> -->
+<!-- <h1>Hello View1<h1> -->
+
 <a href="{{route('data')}}">Home</a>
 <a href="{{route('course')}}">Course</a>
-<div>
-    <h1>This is Home</h1>
-</div>
