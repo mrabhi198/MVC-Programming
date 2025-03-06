@@ -3,4 +3,37 @@
     <h1>This is Home</h1>
 </div>
 
-{{$name}}
+@php
+$a = 10;
+$b = 20;
+@endphp
+
+{{$a}}
+<br>
+{{$b}}
+
+<br>
+{{$a + $b}}
+
+<h1>Comments<h1>
+{{--$c--}}
+
+<h1>Control structure<h1>
+    @php
+    $age = 10
+    @endphp
+
+    @if($age>18)
+        <h2>Voter<h2>
+    @else
+        <h2>NonVoter<h2>
+    
+    @endif
+
+    @php
+    $arr=["banana", "mango", "orange"]
+    @endphp
+
+    @foreach($arr as $i)
+        <li>{{$i}}</li>
+    @endforeach
