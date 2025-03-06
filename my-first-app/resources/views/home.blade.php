@@ -18,22 +18,38 @@ $b = 20;
 <h1>Comments<h1>
 {{--$c--}}
 
-<h1>Control structure<h1>
-    @php
-    $age = 10
-    @endphp
+<h1>Control Structure</h1>
 
-    @if($age>18)
-        <h2>Voter<h2>
-    @else
-        <h2>NonVoter<h2>
-    
-    @endif
+@php
+    $age = 10;
+@endphp
 
-    @php
-    $arr=["banana", "mango", "orange"]
-    @endphp
+@if($age > 18)
+    <h2>Voter</h2>
+@else
+    <h2>Non-Voter</h2>
+@endif
 
+@php
+    $arr = ["banana", "mango", "orange"];
+@endphp
+
+<ul>
     @foreach($arr as $i)
-        <li>{{$i}}</li>
+        <li>{{ $i }}</li>
     @endforeach
+</ul>
+
+<ul>
+    @for($i = 1; $i <= 10; $i++)
+        <li>{{$i}}</li>
+    @endfor
+</ul>
+
+<ul>
+    @php $i = 0; @endphp
+    @while($i < count($arr))
+        <li>{{$arr[$i]}}</li>
+        @php $i++; @endphp
+    @endwhile
+</ul>
