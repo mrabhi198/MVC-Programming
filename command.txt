@@ -25,3 +25,9 @@ to create view file in laravel:
 
 Laravel:
 ->name() ➜ is function (called name route)
+
+to create controller ➜
+    php artisan make:controller controllerName
+
+    route to access controller ➜ Route::get("xyz", [useController::class, message"abc"]);
+    create method

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use App\Http\Controllers\userController;
 
 
 Route::get('/', function () {
@@ -99,21 +100,33 @@ Route::get('/', function () {
 // });
 
 //Response
-Route::get("home", function(){
-    return "Hello Laravel";
-});
+// Route::get("home", function(){
+//     return "Hello Laravel";
+// });
 
-//above is request method
+// //above is request method
 
-Route::get("next", function(){
-    return response("Data Set")->header("Content-Type", "text/plain");
-});
-//OR
-Route::get("prev", function(){
-    return response("Data Set")->header("Content-Type", "text/html");
-});
-//header is only for server not for user
+// Route::get("next", function(){
+//     return response("Data Set")->header("Content-Type", "text/plain");
+// });
+// //OR
+// Route::get("prev", function(){
+//     return response("Data Set")->header("Content-Type", "text/html");
+// });
+// //header is only for server not for user
 
-Route::get("json", function(){
-    return response()->json(["Name"=>"Mojit","City"=>"Jalandhar","Course"=>"Laravel"]);
-});
+// Route::get("json", function(){
+//     return response()->json(["Name"=>"Mojit","City"=>"Jalandhar","Course"=>"Laravel"]);
+// });
+
+Route::get("controller1", [userController::class, "message"]);
+
+Route::get("html", [userController::class, "messagehtml"]);
+Route::get("css", [userController::class, "messagecss"]);
+
+Route::get("re/{num}", [userController::class, "req"]);
+Route::get("op/{num?}", [userController::class, "option"]);
+Route::get("de/{num?}", [userController::class, "default"]);
+
+//return view
+Route::get("index", [userController::class, "index"]);
