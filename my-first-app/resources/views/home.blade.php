@@ -53,3 +53,11 @@ $b = 20;
         @php $i++; @endphp
     @endwhile
 </ul>
+
+<ul>
+    @php $i = 1; @endphp
+    @while($i <= 10)
+        <li>{{$i}}</li>
+        @php $i++; @endphp
+    @endwhile
+</ul>
