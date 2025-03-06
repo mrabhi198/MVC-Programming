@@ -26,4 +26,18 @@ class userController extends Controller
     public function index(){
         return view("home");
     }
+
+    public function datacompact(){
+        $name = "Abc";
+        return view("home", compact('name'));
+    }
+
+    public function dataarray(){
+        $name= "Pqr";
+        return view("home", ['name'=>$name]);
+    }
+
+    public function datawith(){
+        return view("home")->with('name', "Xyz");
+    }
 }

@@ -124,9 +124,17 @@ Route::get("controller1", [userController::class, "message"]);
 Route::get("html", [userController::class, "messagehtml"]);
 Route::get("css", [userController::class, "messagecss"]);
 
+//parameters
 Route::get("re/{num}", [userController::class, "req"]);
 Route::get("op/{num?}", [userController::class, "option"]);
 Route::get("de/{num?}", [userController::class, "default"]);
 
 //return view
 Route::get("index", [userController::class, "index"]);
+
+//data passing
+Route::get("array", [userController::class, "dataarray"]);
+Route::get("compact", [userController::class, "datacompact"]);
+Route::get("with", [userController::class, "datawith"]);
+
+//blade templates
