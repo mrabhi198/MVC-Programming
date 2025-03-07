@@ -31,3 +31,7 @@ to create controller ➜
 
     route to access controller ➜ Route::get("xyz", [useController::class, message"abc"]);
     create method
+
+
+to create ResourceController ➜
+    php artisan make:controller ResourceController --resource

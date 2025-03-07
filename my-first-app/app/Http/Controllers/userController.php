@@ -40,4 +40,9 @@ class userController extends Controller
     public function datawith(){
         return view("home")->with('name', "Xyz");
     }
+
+    public function show($role)
+    {
+        return view('status', ['status' => $role]);
+    }
 }

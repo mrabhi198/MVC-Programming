@@ -138,3 +138,34 @@ Route::get("compact", [userController::class, "datacompact"]);
 Route::get("with", [userController::class, "datawith"]);
 
 //blade templates
+Route::get('index', function(){
+    return view("home");
+});
+
+// Route::get('/status/{status}', function ($status) {
+//     return view('status', ['status' => $status]);
+// });
+
+Route::get('/status/{role}', [userController::class, 'show']);
+
+Route::get('data/{role}',function($role){
+    switch($role){
+        case "admin":
+            return "full access";
+    
+        case "teacher":
+            return "limited access";
+    
+        case "viewer":
+            return "only view access";
+    }
+});
+
+//resourece Controller
+use App\Http\Controllers\ResourceController;
+
+// Route::get("profile", [ResourceController::class]);
+Route::get("profile", [ResourceController::class, "index"]);
+Route::get("edit", [ResourceController::class, "create"]);
+
+Route::resource("pro", ResourceController::class);
