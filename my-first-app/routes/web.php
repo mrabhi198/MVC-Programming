@@ -175,6 +175,10 @@ Route::get('data/{num}', function($num){
     return $num;
 })->whereNumber('num');
 
-Route::get('data/{num}', function($num){
+Route::get('data1/{num}', function($num){
     return $num;
 })->wherealpha('num');
+
+Route::get('data2/{num}', function($num){
+    return $num;
+})->where('num', "[A-Za-z0-9]+");
