@@ -146,20 +146,20 @@ Route::get('index', function(){
 //     return view('status', ['status' => $status]);
 // });
 
-Route::get('/status/{role}', [userController::class, 'show']);
+// Route::get('/status/{role}', [userController::class, 'show']);
 
-Route::get('data/{role}',function($role){
-    switch($role){
-        case "admin":
-            return "full access";
+// Route::get('data/{role}',function($role){
+//     switch($role){
+//         case "admin":
+//             return "full access";
     
-        case "teacher":
-            return "limited access";
+//         case "teacher":
+//             return "limited access";
     
-        case "viewer":
-            return "only view access";
-    }
-});
+//         case "viewer":
+//             return "only view access";
+//     }
+// });
 
 //resourece Controller
 use App\Http\Controllers\ResourceController;
@@ -169,3 +169,12 @@ Route::get("profile", [ResourceController::class, "index"]);
 Route::get("edit", [ResourceController::class, "create"]);
 
 Route::resource("pro", ResourceController::class);
+
+//parameter validate
+Route::get('data/{num}', function($num){
+    return $num;
+})->whereNumber('num');
+
+Route::get('data/{num}', function($num){
+    return $num;
+})->wherealpha('num');
