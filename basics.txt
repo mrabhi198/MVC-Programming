@@ -30,6 +30,7 @@ $b = 20;
     <h2>Non-Voter</h2>
 @endif
 
+
 @php
     $arr = ["banana", "mango", "orange"];
 @endphp
@@ -63,3 +64,65 @@ $b = 20;
 </ul>
 
 home.blade.php 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Expected output:
+if the preferred language cookie exists and is set to fr, the page should display Bienvenue!
+if no cookies is set, the page should prompt: Please select your preferred language

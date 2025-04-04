@@ -66,43 +66,43 @@ Route::get('/', function () {
 // });
 
 //task2
-// Route::get("data/{num}", function($num){
-//     if ($num >= 90 && $num <= 100){
-//         return "Grade A";
-//     } else if ($num >= 80 && $num < 90){
-//         return "Grade B";
-//     } else if ($num >= 70 && $num < 80){
-//         return "Grade C";
-//     } else if ($num >= 60 && $num < 70){
-//         return "Grade D";
-//     } else if ($num < 60 && $num >= 0){
-//         return "fail";
-//     }
-//     return "not less than 0 or grater than 100";
-// });
+Route::get("data/{num}", function($num){
+    if ($num >= 90 && $num <= 100){
+        return "Grade A";
+    } else if ($num >= 80 && $num < 90){
+        return "Grade B";
+    } else if ($num >= 70 && $num < 80){
+        return "Grade C";
+    } else if ($num >= 60 && $num < 70){
+        return "Grade D";
+    } else if ($num < 60 && $num >= 0){
+        return "fail";
+    }
+    return "not less than 0 or grater than 100";
+});
 
 //28th Feb 2025
 //name Route
-// Route::get("admin/student/studentdata", function(){
-//     return view("view1");
-// })->name("data");
+Route::get("admin/student/studentdata", function(){
+    return view("view1");
+})->name("data");
 
 //->name() ➜ is function (called name route)
 
-// Route::get("admin/student/studentcourse", function(){
-//     return view("course");
-// })->name("course");
+Route::get("admin/student/studentcourse", function(){
+    return view("course");
+})->name("course");
 
 
 //redirect webpage to course file
-// Route::get("admin/student/redirect", function(){
-//     return redirect()->route("course");
-// });
+Route::get("admin/student/redirect", function(){
+    return redirect()->route("course");
+});
 
 //Response
-// Route::get("home", function(){
-//     return "Hello Laravel";
-// });
+Route::get("home", function(){
+    return "Hello Laravel";
+});
 
 // //above is request method
 
@@ -118,6 +118,9 @@ Route::get('/', function () {
 // Route::get("json", function(){
 //     return response()->json(["Name"=>"Mojit","City"=>"Jalandhar","Course"=>"Laravel"]);
 // });
+
+//----------------END OF UNIT 2----------------
+//--------------------UNIT 3-------------------
 
 Route::get("controller1", [userController::class, "message"]);
 
@@ -148,18 +151,18 @@ Route::get('index', function(){
 
 // Route::get('/status/{role}', [userController::class, 'show']);
 
-// Route::get('data/{role}',function($role){
-//     switch($role){
-//         case "admin":
-//             return "full access";
+Route::get('data/{role}',function($role){
+    switch($role){
+        case "admin":
+            return "full access";
     
-//         case "teacher":
-//             return "limited access";
+        case "teacher":
+            return "limited access";
     
-//         case "viewer":
-//             return "only view access";
-//     }
-// });
+        case "viewer":
+            return "only view access";
+    }
+});
 
 //resourece Controller
 use App\Http\Controllers\ResourceController;
@@ -184,5 +187,7 @@ Route::get('data2/{num}', function($num){
 })->where('num', "[A-Za-z0-9]+");
 
 Route::get("data123", function(){
-    return 
-})
+    return "Data 123";
+});
+
+// prefix, controller, routes, form, middleware, 
