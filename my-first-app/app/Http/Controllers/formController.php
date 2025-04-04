@@ -14,7 +14,7 @@ class formController extends Controller
         $request->validate([
             "name"=>"Required",
             "email"=>"Required | email",
-            "age"=> "numeric | max:5",
+            "age"=> "numeric | max:10",
             "city"=>"Required"
         ],
     ["name.required"=>"Name Must Be Fill", "age.required"=>"Age Max Value is 10"]);
