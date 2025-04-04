@@ -205,4 +205,6 @@ Route::get("form", function(){
 
 use App\Http\Controllers\formController;
 Route::get("formdata", [formController::class, "index"]);
-Route::get("formdata", [formController::class, "formdata"]);
+Route::post("formdata", [formController::class, "formdata"]);
+
+//Form Validation

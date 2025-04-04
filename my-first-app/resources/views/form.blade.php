@@ -17,14 +17,15 @@
     </style>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="formdata" method="post">
         @csrf
         <h1>Login</h1>
         <input type="text" name="name"><br><br>
         <input type="email" name="email"><br><br>
         <input type="number" name="age"><br><br>
         <input type="text" name="city"><br><br>
-        <button type="submit">Submit</button>
+        <input type="submit">
+        <!-- <button type="submit">Submit</button> -->
     </form>
 </body>
 </html>
