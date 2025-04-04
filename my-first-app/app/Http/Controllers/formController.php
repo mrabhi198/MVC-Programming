@@ -11,6 +11,14 @@ class formController extends Controller
     }
 
     public function formdata(Request $request){
-        return $request->all;
+        $request->validate([
+            "name"=>"Required",
+            "email"=>"Required | email",
+            "age"=> "numeric | max:5",
+            "city"=>"Required"
+        ],
+    ["name.required"=>"Name Must Be Fill", "age.required"=>"Age Max Value is 10"]);
+
+        return $request->all();
     }
 }

@@ -193,18 +193,21 @@ Route::get('/', function () {
 // prefix, controller, routes, form, middleware, 
 
 // Session
-use App\Http\Controllers\SessionController;
-Route::get("set", [SessionController::class, "setsession"]);
-Route::get("get", [SessionController::class, "getsession"]);
-Route::get("delete", [SessionController::class, "deletesession"]);
+// use App\Http\Controllers\SessionController;
+// Route::get("set", [SessionController::class, "setsession"]);
+// Route::get("get", [SessionController::class, "getsession"]);
+// Route::get("delete", [SessionController::class, "deletesession"]);
 
 //Form
-Route::get("form", function(){
-    return view("form");
-});
+// Route::get("form", function(){
+//     return view("form");
+// });
 
+// use App\Http\Controllers\formController;
+// Route::get("formdata", [formController::class, "index"]);
+// Route::post("formdata", [formController::class, "formdata"]);
+
+//Form Validation
 use App\Http\Controllers\formController;
 Route::get("formdata", [formController::class, "index"]);
 Route::post("formdata", [formController::class, "formdata"]);
-
-//Form Validation
