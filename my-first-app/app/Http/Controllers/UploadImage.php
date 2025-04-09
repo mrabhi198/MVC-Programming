@@ -30,12 +30,18 @@ class UploadImage extends Controller
     //     return "Image uploaded successfully. File path: " . $path;
     // }
 
-    public function imagedata(Request $request){
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
-        ]);
+    // public function imagedata(Request $request){
+    //     $request->validate([
+    //         'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+    //     ]);
         
-        $d=public_path('images');
-        return $request->file('image')->move($d,$request->file('image')->getClientOriginalName());
+    //     $d=public_path('images');
+    //     return $request->file('image')->move($d,$request->file('image')->getClientOriginalName());
+    // }
+
+    public function imagedata(Request $request){
+        $file=$request->file('image');
+        $path=$file->store('LPU');
+        return $path;
     }
 }
