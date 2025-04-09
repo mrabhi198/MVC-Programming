@@ -6,7 +6,7 @@
     <title>image</title>
 </head>
 <body>
-    <form action="imagedata" method="post">
+    <form action="imagedata" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="image">
         <input type="submit" name="btn">

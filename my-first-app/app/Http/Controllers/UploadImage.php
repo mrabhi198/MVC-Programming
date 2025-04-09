@@ -10,7 +10,28 @@ class UploadImage extends Controller
         return view("uploadimage");
     }
 
+    // public function imagedata(Request $request){
+    //     $request->file("image");
+    //     return "Image Uploaded";
+    // }
+
+    // public function imagedata(Request $request){
+        
+    //     return $request->file("image")->all()->store();
+    // }
+
+    // public function imagedata(Request $request){
+    //     $request->validate([
+    //         'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust validation rules as needed
+    //     ]);
+
+    //     $path = $request->file('image')->store('uploads', 'public');
+
+    //     return "Image uploaded successfully. File path: " . $path;
+    // }
+
     public function imagedata(Request $request){
-        return $request->file("image");
+        $d=public_path('images');
+        return $request->file('image')->move($d,$request->file('image')->getClientOriginalName());
     }
 }
