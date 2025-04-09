@@ -40,7 +40,7 @@
     <label for="name">Name</label>
     <input type="text" name="name" id="name" value="{{ old('name') }}"><br><br>
     @error("name")
-      <span>{{ $message }}</span>
+      <span>{{ $message }}</span>/home/abhi/Codes/Languages/Laravel/my-first-app/routes/web.php
     @enderror
 
     <label for="age">Age</label>

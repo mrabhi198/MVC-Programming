@@ -208,6 +208,11 @@ Route::get('/', function () {
 // Route::post("formdata", [formController::class, "formdata"]);
 
 //Form Validation
-use App\Http\Controllers\formController;
-Route::get("formdata", [formController::class, "index"]);
-Route::post("formdata", [formController::class, "formdata"]);
+// use App\Http\Controllers\formController;
+// Route::get("formdata", [formController::class, "index"]);
+// Route::post("formdata", [formController::class, "formdata"]);
+
+
+//Custom validation
+Route::get("index", [CustomController::class, "index"]);
+Route::post("formdata", [CustomController::class, "formdata"]);
