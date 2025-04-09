@@ -9,7 +9,10 @@
     <form action="dataform" method="post">
         @csrf
         <input type="text" name="name">
-        <input type="subkit" name="btn">
+        @error('name')
+        {{$message}}
+        @enderror <br>
+        <input type="submit" name="btn">
     </form>
 </body>
 </html>

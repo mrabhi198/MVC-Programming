@@ -214,5 +214,6 @@ Route::get('/', function () {
 
 
 //Custom validation
+use App\Http\Controllers\CustomController;
 Route::get("index", [CustomController::class, "index"]);
-Route::post("formdata", [CustomController::class, "formdata"]);
+Route::post("dataform", [CustomController::class, "dataform"]);
