@@ -31,6 +31,10 @@ class UploadImage extends Controller
     // }
 
     public function imagedata(Request $request){
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        
         $d=public_path('images');
         return $request->file('image')->move($d,$request->file('image')->getClientOriginalName());
     }
