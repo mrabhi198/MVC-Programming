@@ -214,6 +214,11 @@ Route::get('/', function () {
 
 
 //Custom validation
-use App\Http\Controllers\CustomController;
-Route::get("index", [CustomController::class, "index"]);
-Route::post("dataform", [CustomController::class, "dataform"]);
+// use App\Http\Controllers\CustomController;
+// Route::get("index", [CustomController::class, "index"]);
+// Route::post("dataform", [CustomController::class, "dataform"]);
+
+//Image Upload
+use App\Http\Controllers\UploadImage;
+Route::get("image", [UploadImage::class, "image"]);
+Route::post("imagedata", [UploadImage::class, "imagedata"]);
