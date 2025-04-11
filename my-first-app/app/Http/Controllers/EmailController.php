@@ -12,10 +12,18 @@ class EmailController extends Controller
     //     return "Email Sent!";
     // }
 
-    public function sendemail(){
-        $to="kingallan318@gmail.com";
-        $sub="Laravel testing mail";
-        $msg="Hello Laravel First mail";
+    // public function sendemail(){
+    //     $to="kingallan318@gmail.com";
+    //     $sub="Laravel testing mail";
+    //     $msg="Hello Laravel First mail";
+    //     Mail::to($to)->send(new WelcomeEmail($sub, $msg));
+    //     return "Email Sent!";
+    // }
+
+    public function sendemail(Request $request){
+        $to=$request->to;
+        $sub=$request->sub;
+        $msg=$request->msg;
         Mail::to($to)->send(new WelcomeEmail($sub, $msg));
         return "Email Sent!";
     }

@@ -225,4 +225,5 @@ Route::get('/', function () {
 
 //Email
 use App\Http\Controllers\EmailController;
-Route::get("sendemail", [EmailController::class, "sendemail"]);
+Route::post("sendemail", [EmailController::class, "sendemail"]);
+Route::view("sendemail", "emailform");
