@@ -44,4 +44,5 @@ class UploadImage extends Controller
         $path=$file->store('LPU');
         return $path;
     }
+    //store() fun generate random name while move() fun generate specific name
 }

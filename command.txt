@@ -35,3 +35,13 @@ to create controller ➜
 
 to create ResourceController ➜
     php artisan make:controller ResourceController --resource
+
+
+    Email in laravel:
+        web.php
+        controller
+        .env
+        class file
+
+        command to make mailable: php artisan make:mail WelcomeEmail
+            this create WelcomeEmail class in App\Mail directory

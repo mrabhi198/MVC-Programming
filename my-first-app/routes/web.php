@@ -219,6 +219,10 @@ Route::get('/', function () {
 // Route::post("dataform", [CustomController::class, "dataform"]);
 
 //Image Upload
-use App\Http\Controllers\UploadImage;
-Route::get("image", [UploadImage::class, "image"]);
-Route::post("imagedata", [UploadImage::class, "imagedata"]);
+// use App\Http\Controllers\UploadImage;
+// Route::get("image", [UploadImage::class, "image"]);
+// Route::post("imagedata", [UploadImage::class, "imagedata"]);
+
+//Email
+use App\Http\Controllers\EmailController;
+Route::get("sendemail", [EmailController::class, "sendemail"]);
