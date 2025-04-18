@@ -20,11 +20,22 @@ class EmailController extends Controller
     //     return "Email Sent!";
     // }
 
+    // public function sendemail(Request $request){
+    //     $to=$request->to;
+    //     $sub=$request->sub;
+    //     $msg=$request->msg;
+    //     Mail::to($to)->send(new WelcomeEmail($sub, $msg));
+    //     return "Email Sent!";
+    // }
+
     public function sendemail(Request $request){
-        $to=$request->to;
-        $sub=$request->sub;
-        $msg=$request->msg;
-        Mail::to($to)->send(new WelcomeEmail($sub, $msg));
+        $name=$request->name;
+        $city=$request->city;
+        $course=$request->course;
+        $fee=$request->fee;
+        $gender=$request->gender;
+        $add=$request->add;
+        Mail::to($to)->send(new WelcomeEmail($name, $city, $course, $fee, $gender, $add));
         return "Email Sent!";
     }
 }

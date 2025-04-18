@@ -1,5 +1,6 @@
 Step to create new project ➜
     to install laravel global: composer global require laravel/installer
+                                OR composer create-project laravel/laravel projectName
     to create project: laravel new projectName.
         ➜ no starting kit (none)
         ➜ pest
@@ -45,3 +46,14 @@ to create ResourceController ➜
 
         command to make mailable: php artisan make:mail WelcomeEmail
             this create WelcomeEmail class in App\Mail directory
+
+
+MySQL:
+    web.php
+    mysqlController.php  (php artisan migrate   )
+    index.blade.php
+
+    Seeder:
+        php artisan make:seeder seederName
+
+        for open phpmyadmin => localhost/dashboard-> got to phpmyadmin
