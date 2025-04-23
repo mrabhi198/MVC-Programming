@@ -49,6 +49,8 @@ to create ResourceController ➜
 
 
 MySQL:
+    for start: sudo /opt/lampp/lampp start
+    
     web.php
     mysqlController.php  (php artisan migrate   )
     index.blade.php
@@ -57,3 +59,10 @@ MySQL:
         php artisan make:seeder seederName
 
         for open phpmyadmin => localhost/dashboard-> got to phpmyadmin
+
+
+    RestAPI: 
+        php artisan make:model RestApiModel
+        php artisan make:migration create_RestApi_table
+        php artisan install:api
+        php artisan make:controller RestApiController --api
