@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\RestApiModel;
 
 use Illuminate\Http\Request;
 

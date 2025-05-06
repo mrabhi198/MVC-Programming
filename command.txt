@@ -66,3 +66,9 @@ MySQL:
         php artisan make:migration create_RestApi_table
         php artisan install:api
         php artisan make:controller RestApiController --api
+
+
+
+    Project:
+        start docker: sudo systemctl start docker
+        status check: sudo systemctl status docker
