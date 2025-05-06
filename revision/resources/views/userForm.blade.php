@@ -26,7 +26,13 @@
                     @enderror
                 </span>
                 <br><br>
-                <input class="input" type="text" name="city" placeholder="Enter Your city"><br><br>
+                <input class="input" type="text" name="city" placeholder="Enter Your city">
+                <span class='err'>
+                    @error('city')
+                        {{$message}}
+                    @enderror
+                </span>
+                <br><br>
                 <div>
                     <h2>Skills</h2>
                     <input type="checkbox" name="skill[]" id="php" value="PHP">

@@ -18,7 +18,7 @@ class FormController extends Controller
         $req->validate([
             'name'=>'required | min: 3',
             'email'=>'required | email',
-            'city'=>'required | min: 10,  max: 20',
+            'city'=>'required | uppercase',
             'skill'=>'required',
             'gender'=>'required'
         ],[
